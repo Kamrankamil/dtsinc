@@ -1,0 +1,6 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="360" height="360" rx="36" fill="#0E1A2F"/>
+  <circle cx="180" cy="140" r="64" fill="#233454"/>
+  <rect x="88" y="220" width="184" height="90" rx="45" fill="#1A2A45"/>
+  <text x="140" y="152" fill="#E9EEF8" font-size="36" font-family="Arial, sans-serif">HT</text>
+</svg>
