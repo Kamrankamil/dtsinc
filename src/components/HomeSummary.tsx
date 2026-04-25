@@ -6,6 +6,7 @@ import Link from "next/link";
 import {
   BarChart2,
   Bot,
+   ArrowRight,
   Boxes,
   Brain,
   ChevronRight,
@@ -25,7 +26,7 @@ import {
 
 const stats = [
  {
-   value:"10+",
+   value:"10000+",
    label:"Live Projects",
    icon: Users,
  },
@@ -358,105 +359,44 @@ export default function HomeSummary() {
 </section>
 
       {/* ══════════════════════ BOTTOM CTA ══════════════════════ */}
-    {/* ═════════════ FUTURISTIC CTA SECTION ═════════════ */}
-<section className="bg-[#030b1f] pb-24">
- <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
-
-  <motion.div
-   {...fade(.1)}
-   className="
-   relative overflow-hidden rounded-3xl
-   border border-[#1d3356]
-   bg-gradient-to-r from-[#081426] via-[#091a35] to-[#071221]
-   px-10 py-12"
-  >
-
-   {/* background glow */}
-   <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(40,120,255,.15),transparent_35%),radial-gradient(circle_at_75%_45%,rgba(255,60,60,.12),transparent_30%)]" />
-
-   {/* city line glow */}
-   <div className="absolute bottom-0 right-0 h-44 w-[45%] bg-[url('/assets/city-glow.png')] bg-contain bg-bottom bg-no-repeat opacity-60" />
-
-   <div className="relative z-10 flex flex-col items-center justify-between gap-8 lg:flex-row">
-
-    {/* left text */}
-    <div className="max-w-xl">
-      <h2 className="text-4xl font-extrabold leading-tight text-white">
-        Ready to build the <br />
-        future with us?
-      </h2>
-
-      <p className="mt-4 text-[15px] leading-7 text-[#8ca3ca]">
-       Let's collaborate on AI, blockchain and intelligent
-       automation solutions.
-      </p>
-    </div>
-
-
-    {/* center play button */}
-    <button className="
-      group relative flex h-20 w-20 items-center justify-center
-      rounded-full border border-[#c9473d]/50
-      bg-[#0c1933]
-      shadow-[0_0_35px_rgba(209,72,64,.22)]
-      transition hover:scale-105
-    ">
-       <span className="absolute h-20 w-20 animate-ping rounded-full border border-red-500/20"></span>
-
-       <div className="
-        flex h-14 w-14 items-center justify-center
-        rounded-full bg-gradient-to-r from-[#cf443d] to-[#ff5f57]
-       ">
-          ▶
-       </div>
-    </button>
-
-
-    {/* right button */}
-    <Link
-      href="/contact"
-      className="
-      inline-flex items-center gap-2 rounded-xl
-      bg-gradient-to-r from-[#c53931] to-[#ff5f57]
-      px-8 py-4 text-sm font-bold text-white
-      shadow-[0_0_30px_rgba(209,72,64,.28)]
-      transition hover:scale-105
-      "
-    >
-      Contact Us →
-    </Link>
-
-   </div>
-  </motion.div>
-
-
-  {/* bottom features row */}
-  <div className="mt-8 grid gap-6 md:grid-cols-4">
-    {[
-      ["Trusted & Secure","Enterprise-grade security and data protection"],
-      ["AI-Powered","Intelligent solutions built with advanced AI"],
-      ["Global Reach","Serving clients across 25+ countries"],
-      ["Dedicated Support","24/7 support from our expert team"],
-    ].map(([title,text])=>(
-      <div
-       key={title}
-       className="
-       rounded-2xl border border-[#1d3356]
-       bg-[#071226] p-5"
-      >
-        <h4 className="font-bold text-white">
-         {title}
-        </h4>
-
-        <p className="mt-2 text-sm leading-6 text-[#7e97c0]">
-         {text}
-        </p>
-      </div>
-    ))}
-  </div>
-
- </div>
-</section>
+     <section className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#081631] p-6 md:p-7">
+          <Image
+            src="/assets/hand dts blockchain.png"
+            alt="Build the future with DTS"
+            fill
+            className="object-cover object-right-center opacity-80"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,19,49,0.9)_0%,rgba(7,19,49,0.82)_38%,rgba(7,19,49,0.38)_74%,rgba(7,19,49,0.22)_100%)]" />
+          <div className="relative z-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d14840]">
+                Partner With Us
+              </p>
+              <h3 className="mt-2 text-5xl font-semibold text-white">Build the Future with DTS</h3>
+              <p className="mt-3 max-w-2xl text-base leading-8 text-[#c5d4ee]">
+                Let&apos;s work together to solve complex challenges, unlock new opportunities,
+                and create a better tomorrow.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#cc2e26] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(204,46,38,0.45)] transition hover:bg-[#e8403a] hover:shadow-[0_0_36px_rgba(232,64,58,0.6)]"
+              >
+                Contact Us
+                <ArrowRight size={14} />
+              </a>
+              <a
+                href="/projects"
+                className="inline-flex items-center gap-2 rounded-lg border border-white/25 bg-[#0b1a3d]/55 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/45"
+              >
+                Explore Projects
+                <ArrowRight size={14} />
+              </a>
+            </div>
+          </div>
+        </section>
+    
     </>
   );
 }

@@ -145,7 +145,7 @@ export default function DoneProjects() {
                 <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
                   <Blocks size={20} className="text-[#ff5f57]" />
                   <div>
-                    <p className="text-2xl font-bold text-white">10+</p>
+                    <p className="text-2xl font-bold text-white">10000+</p>
                     <p className="text-xs text-[#9cb0d3]">Live Projects</p>
                   </div>
                 </div>
