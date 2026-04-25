@@ -83,22 +83,20 @@ export default function Hero3D() {
           transition={{ duration: 0.8 }}
           className="max-w-[620px]"
         >
-          <p className="mb-5 text-xs font-bold uppercase tracking-[0.35em] text-[#e05a52]">
-            DTS ADVANCED BLOCKCHAIN AND AI LAB
-          </p>
+         <p className="mb-5 text-xs tracking-[.35em] uppercase font-bold text-[#e05a52]">
+DTS ADVANCED BLOCKCHAIN AND AI LAB
+</p>
 
-          <h1 className="text-5xl font-black leading-[1.05] text-white xl:text-7xl">
-            DTS AI and RPA
-            <br />
-            development team
-            <br />
-            provides following.
-          </h1>
+<h1 className="leading-[1.05] text-white font-black text-5xl xl:text-7xl">
+Building the Future <br/>
+with <span className="text-[#ff5f57]">Blockchain</span> & AI
+</h1>
 
-          <p className="mt-7 max-w-[540px] text-lg leading-8 text-[#8ea7cf]">
-            AI prediction systems, blockchain infrastructure, RPA automation and
-            secure digital solutions designed for global enterprise innovation.
-          </p>
+<p className="mt-7 max-w-[520px] text-lg leading-8 text-[#8ea7cf]">
+AI prediction systems, blockchain infrastructure,
+RPA automation and secure digital solutions designed
+for global enterprise innovation.
+</p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
