@@ -50,15 +50,14 @@ const dtsPeople = [
    
     cta: "Message",
   },
-  {
-    name: "Asadullah Soomro",
-    role: "Software Engineer at DTS Inc.",
-        image: "/assets/Team/asadullah.jfif",
+   {
+    name: "Mohsin",
+    role:  "market research analyst | blockchain analyst ",
     connection: "1st",
-    status: "Open to work",
+  
     cta: "Message",
   },
-    {
+   {
     name: "Muhammad Waqar",
     role: "Software Engineer",
      image: "/assets/Team/muhammadwaqar.jfif",
@@ -66,6 +65,15 @@ const dtsPeople = [
     cta: "Message",
     
   },
+  {
+    name: "Asadullah Soomro",
+    role: "Software Engineer at DTS Inc.",
+    
+    connection: "1st",
+    status: "Open to work",
+    cta: "Message",
+  },
+   
 
   {
     name: "Iftikhar Mustafa",
