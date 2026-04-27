@@ -8,13 +8,9 @@ type ThemeProviderProps = {
 
 export default function ThemeProvider({ children }: ThemeProviderProps) {
   useEffect(() => {
-    const saved = localStorage.getItem("dts-theme");
-    const prefersLight =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: light)").matches;
-    const lightMode = saved ? saved === "light" : prefersLight;
-
-    document.documentElement.classList.toggle("light", lightMode);
+    // Force dark theme globally
+    document.documentElement.classList.remove("light");
+    localStorage.setItem("dts-theme", "dark");
   }, []);
 
   return <>{children}</>;

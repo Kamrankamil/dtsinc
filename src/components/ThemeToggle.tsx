@@ -22,7 +22,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label="Toggle dark and light mode"
-      className="glass-card rounded-full p-2 transition-transform hover:scale-105"
+      className="rounded-full p-2 transition-transform hover:scale-105 bg-primary text-foreground"
     >
       {isLight ? <Moon size={18} /> : <Sun size={18} />}
     </button>
