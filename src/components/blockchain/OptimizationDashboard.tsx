@@ -76,6 +76,48 @@ export default function OptimizationDashboard() {
           </motion.article>
         ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.55, delay: 0.08 }}
+        className="mt-6 rounded-2xl border border-white/10 bg-[#071531]/75 p-5 md:p-6"
+      >
+        <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#ff8a82]">Since 1996</p>
+            <h3 className="mt-2 text-2xl font-bold text-white md:text-3xl">DTS PoA Blockchain Foundation</h3>
+          </div>
+          <p className="max-w-xl text-sm uppercase tracking-[0.16em] text-[#8fb6ff]">
+            Decentralized network systems, distributed data, and secure value transfer.
+          </p>
+        </div>
+
+        <div className="mt-5 space-y-4 text-sm leading-8 text-[#b7c7e4] md:text-base">
+          <p>
+            Since 1996, DTS Group has advanced research, innovation, and development for decentralized
+            network systems and distributed data technologies, supported by its own memory caching
+            technology.
+          </p>
+          <p>
+            Our original PoA blockchain uses participant-node voting for blockchain mining, helping avoid
+            the high electric energy consumption seen in conventional mining models. It also includes a
+            unique confirmation mechanism for FT and NFT transfers that helps prevent transfer mistakes by
+            validating whether a transaction should proceed before settlement. As a result, the blockchain
+            is designed to reduce unknown transaction failures and mitigate hacking-related accidents.
+          </p>
+          <p>
+            Today, we provide these technologies to the global industrial market and digital financial
+            domain through trusted partners.
+          </p>
+          <p>
+            We continue to deliver a stable blockchain network with a highly secure token transfer
+            mechanism and wallet infrastructure to support a future human-to-physical AI value exchange
+            society.
+          </p>
+        </div>
+      </motion.div>
     </section>
   );
 }

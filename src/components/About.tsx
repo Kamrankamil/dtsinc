@@ -73,7 +73,7 @@ const solutions = [
     icon: Rocket,
   },
   {
-    title: "C Secure Wallet",
+    title: "IIC Secure Wallet",
     body: "Next-gen crypto wallet with multi-layer security and biometric protection mechanisms.",
     icon: Wallet,
   },

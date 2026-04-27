@@ -117,7 +117,7 @@ const products = [
 
 const wallet = {
   icon: Wallet,
-  title: "C Secure Wallet (DTS WALLET)",
+  title: "IIC Secure Wallet (DTS WALLET)",
   body: "The world's first data-organization engine with digital banking wallet, designed to protect assets, support tokens, cryptocurrencies and modern security.",
   href: "/about",
 };
@@ -230,6 +230,55 @@ export default function HomeSummary() {
         </div>
       </section>
 
+      <section className="bg-[#030b1f] pb-10">
+        <div className="mx-auto max-w-[1400px] px-6 lg:px-14">
+          <motion.div
+            {...fade(0.06)}
+            className="relative overflow-hidden rounded-[28px] border border-[#20314f] bg-[linear-gradient(145deg,#071226,#0a1730)] p-7 md:p-10"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_24%,rgba(209,72,64,0.16),transparent_34%),radial-gradient(circle_at_82%_18%,rgba(58,114,255,0.16),transparent_34%)]" />
+
+            <div className="relative z-10 grid gap-8 lg:grid-cols-[0.38fr_0.62fr] lg:items-start">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#d14840]">
+                  Blockchain Innovation Since 1996
+                </p>
+                <h2 className="mt-4 text-3xl font-extrabold leading-tight text-white md:text-5xl">
+                  DTS decentralized network research and secure transfer architecture
+                </h2>
+                <p className="mt-5 max-w-md text-base leading-8 text-[#8ca4c9]">
+                  DTS Group has continued research, innovation, and development in decentralized
+                  network systems and distributed data technologies, backed by its own memory caching
+                  technology.
+                </p>
+              </div>
+
+              <div className="space-y-5 text-[15px] leading-8 text-[#b7c7e4] md:text-base">
+                <p>
+                  Our original PoA blockchain includes a voting function for blockchain mining by
+                  participant nodes, helping avoid the high electric energy consumption associated with
+                  conventional mining structures.
+                </p>
+                <p>
+                  It also includes a unique FT and NFT transfer confirmation function that verifies true
+                  or untrue transfer state before completion, helping prevent token transfer mistakes,
+                  unknown transaction failure, and hacking-related accidents.
+                </p>
+                <p>
+                  Today, we provide these technologies to the global industry market and digital
+                  financial domain through partners, and we continue delivering stable blockchain
+                  networks with highly secure token transfer mechanisms and wallet infrastructure.
+                </p>
+                <p>
+                  This work supports our long-term goal of enabling a human-to-physical AI value
+                  exchange society.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
     {/* ══════════════════════ ABOUT DTS ══════════════════════ */}
 <section className="relative overflow-hidden bg-[#020917] pb-28 pt-10">
   {/* background glow */}
@@ -250,7 +299,7 @@ export default function HomeSummary() {
         </h2>
 
         <p className="mt-6 text-[16px] leading-8 text-[#8ca4c9]">
-          DTS Inc was established in 1996 by Dr. Taikachiafi and has delivered
+          DTS Inc was established in 1996 by Dr. Takahashi and has delivered
           advanced products and research in semantic web systems, AI prediction,
           blockchain, BI platforms, cybersecurity, and global consultancy operations.
         </p>

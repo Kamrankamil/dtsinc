@@ -42,7 +42,7 @@ export const aboutFeatures = [
     body: "Global marketing platform helping SMEs promote products and expand visibility across high-growth international regions.",
   },
   {
-    title: "C Secure Wallet (IIC S WALLET)",
+    title: "IIC Secure Wallet (IIC S WALLET)",
     body: "The world's first next-generation crypto and digital currency wallet designed to protect assets against hackers, compromised devices, and advanced cyber threats through layered blockchain and biotechnology-driven security.",
   },
 ];
