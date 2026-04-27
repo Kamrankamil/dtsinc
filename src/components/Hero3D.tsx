@@ -76,46 +76,46 @@ export default function Hero3D() {
         ))}
       </div>
 
-      <div className="relative z-10 mx-auto grid min-h-[88vh] max-w-[1450px] items-center gap-10 px-6 lg:grid-cols-2 lg:px-14">
+      <div className="relative z-10 mx-auto grid min-h-[88vh] max-w-[1450px] items-center gap-10 px-5 lg:grid-cols-2 lg:px-14">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-[620px]"
+          className="max-w-[620px] text-center lg:text-left mx-auto lg:mx-0"
         >
          <p className="mb-5 text-xs tracking-[.35em] uppercase font-bold text-[#e05a52]">
 DTS ADVANCED BLOCKCHAIN AND AI LAB
 </p>
 
-<h1 className="leading-[1.05] text-white font-black text-5xl xl:text-7xl">
+<h1 className="leading-[1.05] text-white font-black text-4xl md:text-5xl xl:text-7xl">
 Building the Future <br/>
 with <span className="text-[#ff5f57]">Blockchain</span> & AI
 </h1>
 
-<p className="mt-7 max-w-[520px] text-lg leading-8 text-[#8ea7cf]">
+<p className="mt-7 max-w-[520px] text-base md:text-lg leading-8 text-[#8ea7cf] mx-auto lg:mx-0">
 AI prediction systems, blockchain infrastructure,
 RPA automation and secure digital solutions designed
 for global enterprise innovation.
 </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#c63d35] to-[#ff5f57] px-8 py-4 font-bold text-white shadow-[0_0_30px_rgba(209,72,64,.35)] transition hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#c63d35] to-[#ff5f57] px-6 py-3 md:px-8 md:py-4 font-bold text-white shadow-[0_0_30px_rgba(209,72,64,.35)] transition hover:scale-105"
             >
               Read More <ChevronRight size={18} />
             </Link>
 
             <Link
               href="/projects"
-              className="inline-flex items-center rounded-xl border border-[#274169] bg-[#071226] px-8 py-4 font-semibold text-white transition hover:border-[#c63d35]"
+              className="inline-flex items-center rounded-xl border border-[#274169] bg-[#071226] px-6 py-3 md:px-8 md:py-4 font-semibold text-white transition hover:border-[#c63d35]"
             >
               Our Services
             </Link>
           </div>
         </motion.div>
 
-        <div className="relative flex min-h-[760px] items-center justify-center">
+        <div className="relative hidden lg:flex min-h-[760px] items-center justify-center">
           <div className="absolute h-[760px] w-[760px] rounded-full bg-blue-500/20 blur-[180px]" />
           <div className="absolute h-[560px] w-[560px] rounded-full bg-red-500/20 blur-[140px]" />
 

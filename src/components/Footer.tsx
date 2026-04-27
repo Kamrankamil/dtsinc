@@ -6,9 +6,11 @@ const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Team", href: "/team" },
   { label: "Blockchain", href: "/blockchain" },
+  { label: "Projects", href: "/projects" },
   { label: "Publications", href: "/publications" },
   { label: "Contact Us", href: "/contact" },
   { label: "CEO", href: "/ceo" },
+  { label: "DTS Links", href: "/links" },
 ];
 
 const categories = [

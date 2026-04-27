@@ -49,30 +49,29 @@ const stats = [
 /* ── Data ─────────────────────────────────────────────── */
 
 
-
 const services = [
   {
     icon: Brain,
     title: "AI & Machine Learning",
-    body: "DTS Inc. established in 1996 by Dr. Taikachiafi with a depth IT and computer science expertise.",
+    body: "Advanced AI research, predictive analytics, deep learning, and intelligent automation solutions powering next-generation enterprise innovation.",
     href: "/about",
   },
   {
     icon: Bot,
     title: "Robotic Process Automation",
-    body: "Semantic web algorithms including crawling, vector, internet mining, and ontological forensic models.",
+    body: "Intelligent process automation using semantic web algorithms, workflow orchestration, data mining, and autonomous business optimization.",
     href: "/about",
   },
   {
     icon: Boxes,
     title: "Blockchain Solutions",
-    body: "Ontology-driven fraud and market transaction tracking for enterprise and financial systems.",
+    body: "Secure blockchain architectures, smart contracts, decentralized applications, ontology-driven fraud detection, and digital asset innovation.",
     href: "/blockchain",
   },
   {
     icon: ShieldCheck,
     title: "Cybersecurity",
-    body: "C Secure Wallet (DTS WALLET) with advanced digital wallet with advanced protection for digital assets, devices, and modern cyber threats.",
+    body: "Advanced cybersecurity solutions including secure digital wallets, threat intelligence, blockchain security, privacy protection, and cyber defense systems.",
     href: "/about",
   },
 ];
@@ -160,9 +159,9 @@ export default function HomeSummary() {
        <div
         key={item.label}
         className={`
-         relative flex items-center gap-5 px-10 py-10
+         relative flex items-center gap-4 px-5 py-6 lg:px-10 lg:py-10
          ${index !== stats.length-1 
-         ? "lg:border-r border-white/10" : ""}
+         ? "lg:border-r border-white/10" : "border-b lg:border-b-0 border-white/10"}
         `}
        >
         
@@ -181,7 +180,7 @@ export default function HomeSummary() {
 
         {/* text */}
         <div>
-          <h3 className="text-4xl font-extrabold text-white">
+          <h3 className="text-2xl lg:text-4xl font-extrabold text-white">
             {item.value}
           </h3>
 
@@ -238,7 +237,7 @@ export default function HomeSummary() {
 
   <div className="relative mx-auto max-w-[1400px] px-6 lg:px-14">
 
-    <div className="grid items-center gap-16 lg:grid-cols-2">
+    <div className="grid items-center gap-8 lg:gap-16 lg:grid-cols-2">
       
       {/* LEFT CONTENT */}
       <motion.div {...fade(0)}>
@@ -246,7 +245,7 @@ export default function HomeSummary() {
           WHO WE ARE
         </p>
 
-        <h2 className="mt-4 text-5xl font-extrabold text-white leading-tight">
+        <h2 className="mt-4 text-3xl md:text-5xl font-extrabold text-white leading-tight">
           About DTS
         </h2>
 
@@ -372,7 +371,7 @@ export default function HomeSummary() {
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d14840]">
                 Partner With Us
               </p>
-              <h3 className="mt-2 text-5xl font-semibold text-white">Build the Future with DTS</h3>
+              <h3 className="mt-2 text-2xl md:text-4xl lg:text-5xl font-semibold text-white">Build the Future with DTS</h3>
               <p className="mt-3 max-w-2xl text-base leading-8 text-[#c5d4ee]">
                 Let&apos;s work together to solve complex challenges, unlock new opportunities,
                 and create a better tomorrow.

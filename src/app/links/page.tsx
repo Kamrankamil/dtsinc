@@ -3,6 +3,9 @@ import PageShell from "@/components/PageShell";
 
 const externalLinks = [
   { title: "DTS FinTech", href: "https://www.dts-fintech.com/" },
+  { title: "DTS AI Trading", href: "http://3.134.5.238:8083/dts_ai/login.php" },
+  { title: "DTS Mining Portal", href: "http://3.20.158.33/DTS-Optimizing-portal/" },
+  { title: "ETC Pool", href: "http://18.224.148.36:81/#/" },
   { title: "MVTZ About", href: "https://metavtz.com/about-mvtz/" },
   { title: "S Wallet iOS", href: "https://metavtz.com/s-wallet-ios/" },
   {

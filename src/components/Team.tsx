@@ -12,14 +12,14 @@ const teamMembers = [
     image: "/assets/ceo%20hero%20image.png",
   },
   {
-    name: "DTS AI Engineering Team",
-    role: "Machine Learning",
-       image: "/assets/Team/uzair%20arshad.jfif",
+    name: "Uzair Arshad",
+    role: "DTS AI Engineering Team",
+       image: "/assets/Team/uzair%20arshad.png",
     focus: "Market intelligence, prediction systems, and automation",
     initials: "AI",
   },
   {
-    name: "DTS Blockchain Lab",
+    name: "Uzair Lakhani",
     role: "Blockchain R&D",
      image: "/assets/Team/uzair%20lakhani.jfif",
     focus: "Secure wallets, voting chains, and optimization",
@@ -34,32 +34,37 @@ const teamMembers = [
 ];
 
 const dtsPeople = [
-     {
-    name: "Uzair Arshad",
-    role: "Driving Web3 Innovation at MVTZ Dubai | Blockchain, Crypto Wallet & Metaverse Project Supervision",
-            image: "/assets/Team/uzair%20arshad.jfif",
-    connection: "2nd",
-    cta: "Connect",
-  },
-    {
-    name: "Uzair Lakhani",
-    role: "Senior Software Engineer at Data Transmission System",
-    connection: "1st",
-    image: "/assets/Team/uzair%20lakhani.jfif",
-    cta: "Message",
-  },
+   
    {
     name: "Muhammad Kamran",
     role:  "Blockchain Developer | Smart Contracts | Solidity | Frontend Engineering",
     connection: "1st",
-    image: "/assets/Team/muhmmadkamran-blockchain.jpg",
+    image: "/assets/Team/muhmmadkamran-blockchaindeveloper.png",
     cta: "Message",
   },
   {
     name: "Mubashir Khan",
     role: "Blockchain Architect | Blockchain Core Developer | Blockchain Analyst",
+       image: "/assets/Team/mubashir.jfif",
+    connection: "1st",
+   
+    cta: "Message",
+  },
+  {
+    name: "Asadullah Soomro",
+    role: "Software Engineer at DTS Inc.",
+        image: "/assets/Team/asadullah.jfif",
+    connection: "1st",
+    status: "Open to work",
+    cta: "Message",
+  },
+    {
+    name: "Muhammad Waqar",
+    role: "Software Engineer",
+     image: "/assets/Team/muhammadwaqar.jfif",
     connection: "1st",
     cta: "Message",
+    
   },
 
   {
@@ -75,12 +80,7 @@ const dtsPeople = [
     connection: "1st",
     cta: "Message",
   },
-  {
-    name: "Muhammad Waqar",
-    role: "Software Engineer",
-    connection: "1st",
-    cta: "Message",
-  },
+
  
   {
     name: "Rizwan Ali",
@@ -88,13 +88,7 @@ const dtsPeople = [
     connection: "1st",
     cta: "Message",
   },
-  {
-    name: "Asadullah Soomro",
-    role: "Software Engineer at DTS Inc.",
-    connection: "1st",
-    status: "Open to work",
-    cta: "Message",
-  },
+  
   {
     name: "Engr GM",
     role: "Java Developer | Spring Boot | REST APIs | Hibernate | Microservices",
@@ -124,6 +118,18 @@ const dtsPeople = [
   {
     name: "Ghulam Mustafa",
     role: "Java / C# / ASP.NET Web API Trainer & Developer",
+    connection: "2nd",
+    cta: "Connect",
+  },
+    {
+    name: "Faizan khan",
+    role: "IT Support Engineer | Network Administration | System Maintenance",
+    connection: "2nd",
+    cta: "Connect",
+  },
+    {
+    name: "Saleemudin",
+    role: "HR Manager at DTS Inc.",
     connection: "2nd",
     cta: "Connect",
   },
@@ -231,7 +237,7 @@ export default function Team() {
             </div>
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {dtsPeople.map((person, index) => (
               <motion.article
                 key={person.name}

@@ -275,7 +275,7 @@ export default function About({ isHome = false }: AboutProps) {
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d14840]">
             Why DTS Stands Out
           </p>
-          <div className="mt-5 grid gap-4 md:grid-cols-5">
+          <div className="mt-5 grid gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
             {strengths.map((feature) => (
               <div
                 key={feature.title}
@@ -289,65 +289,158 @@ export default function About({ isHome = false }: AboutProps) {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-white/10 bg-[linear-gradient(120deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-4 md:p-6">
-          <div className="grid gap-5 lg:grid-cols-[300px_1fr_0.82fr]">
-            <div className="relative overflow-hidden rounded-xl border border-white/10 bg-[#081530]">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_20%,rgba(209,72,64,0.32),transparent_45%),radial-gradient(circle_at_85%_70%,rgba(77,122,235,0.28),transparent_44%)]" />
-              <div className="relative h-[340px]">
-                <Image
-                  src="/assets/ceo%20hero%20image.png"
-                  alt="Prof. Hiro Takahashi"
-                  fill
-                  className="object-cover object-center"
-                  style={{ objectPosition: "50% 15%" }}
-                />
-                {/* right-side fade to blend with adjacent column */}
-                <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#081530] to-transparent" />
-              </div>
-            </div>
+  <section className="rounded-2xl border border-white/10 bg-[linear-gradient(120deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-4 md:p-6">
+  <div className="grid gap-5 grid-cols-1 lg:grid-cols-[300px_1fr_0.82fr]">
 
-            <div className="rounded-xl border border-white/10 bg-[#091736]/70 p-5">
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d14840]">
-                Our Leadership
-              </p>
-              <h3 className="mt-2 text-5xl font-semibold text-white">Prof. Hiro Takahashi PhD</h3>
-              <p className="mt-2 text-2xl font-medium text-[#ff7269]">Founder &amp; Chief Technology Officer</p>
-              <p className="mt-4 text-lg leading-8 text-[#c1d0ea]">
-                A visionary leader in AI, Semantic Web, and Blockchain innovation with
-                30+ years of research and industry experience.
-              </p>
+    {/* LEFT CEO PROFILE CARD */}
+    <div className="relative min-h-[560px] overflow-hidden rounded-[24px] border border-[#1a335f] bg-gradient-to-br from-[#06152f] via-[#081a42] to-[#132b63]">
 
-              <ul className="mt-5 space-y-3 text-base leading-8 text-[#c3d3ee]">
-                {[
-                  "Pioneer in Ontology-driven AI and Semantic Technologies",
-                  "Advisor to Global Enterprises and Government Institutions",
-                  "Author of 50+ Research Publications",
-                  "Holder of Multiple Patents in AI, Security & Blockchain",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-2 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-[#ff4d43] shadow-[0_0_8px_rgba(255,77,67,0.8)]" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      {/* Ambient Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,90,70,.18),transparent_38%),radial-gradient(circle_at_80%_75%,rgba(65,120,255,.16),transparent_42%)]" />
 
-            <div className="rounded-xl border border-white/10 bg-[#0a1736]/78 p-5 lg:border-l lg:border-l-white/15">
-              <p className="text-6xl leading-none text-[#ff4d43]">“</p>
-              <p className="mt-2 text-4xl leading-[1.35] text-white">
-                Our mission is to build technologies that create a smarter,
-                safer, and more transparent world.
-              </p>
-              <p className="mt-5 text-2xl italic text-[#d7e5ff]">H. Takahashi</p>
-              <p className="mt-4 text-xl font-semibold text-[#ff6d64]">Vision for the Future</p>
-              <p className="mt-2 text-base leading-8 text-[#b8c8e6]">
-                We envision a world where AI and blockchain empower people and
-                organizations to collaborate securely, innovate fearlessly,
-                and grow sustainably.
-              </p>
+      {/* Portrait Card */}
+      <div className="absolute top-6 left-6 right-6 rounded-[22px] border border-white/10 bg-[#091528] overflow-hidden shadow-[0_0_40px_rgba(0,0,0,.35)]">
+
+        <div className="relative h-[430px] w-full">
+          <Image
+            src="/assets/ceo hero image.png"
+            alt="Prof. Hiro Takahashi"
+            fill
+            priority
+            className="object-cover object-top"
+            sizes="400px"
+          />
+
+          {/* image fade */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#091528] via-transparent to-transparent" />
+        </div>
+
+        {/* Profile Content */}
+        <div className="relative z-10 p-4 md:p-6">
+          <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#ff6358]">
+            CEO PROFILE
+          </p>
+
+          <h3 className="mt-3 text-3xl font-semibold text-white">
+            Prof. Hiro Takahashi
+          </h3>
+
+          <p className="mt-2 text-[#ff766b] text-lg">
+            Founder & Chief Technology Officer
+          </p>
+
+          <p className="mt-4 text-sm leading-7 text-[#c5d4ef]">
+            Pioneer in AI, Semantic Web, Blockchain innovation and
+            enterprise security systems with decades of global impact.
+          </p>
+
+        
+        </div>
+      </div>
+
+      {/* Bottom Accent Area */}
+      <div className="absolute bottom-0 left-0 right-0 h-[210px] bg-gradient-to-br from-[#081735] to-[#213d78]" />
+
+      <div className="absolute bottom-10 left-8 w-28 h-[2px] bg-gradient-to-r from-[#ff5649] to-transparent" />
+    </div>
+
+
+    {/* CENTER CONTENT */}
+    <div className="rounded-xl border border-white/10 bg-[#091736]/70 p-6">
+      <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d14840]">
+        Our Leadership
+      </p>
+
+      <h3 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-semibold text-white">
+        Prof. Hiro Takahashi PhD
+      </h3>
+
+      <p className="mt-2 text-2xl font-medium text-[#ff7269]">
+        Founder & Chief Technology Officer
+      </p>
+
+      <p className="mt-5 text-lg leading-8 text-[#c1d0ea]">
+        A visionary leader in AI, Semantic Web, and Blockchain innovation
+        with 30+ years of research and industry experience.
+      </p>
+
+      <ul className="mt-8 space-y-4 text-base leading-8 text-[#c3d3ee]">
+        {[
+          "Pioneer in Ontology-driven AI and Semantic Technologies",
+          "Advisor to Global Enterprises and Government Institutions",
+          "Author of 50+ Research Publications",
+          "Holder of Multiple Patents in AI, Security & Blockchain",
+        ].map((item) => (
+          <li key={item} className="flex items-start gap-3">
+            <span className="mt-2 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-[#ff4d43] shadow-[0_0_8px_rgba(255,77,67,0.8)]" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-10 rounded-xl border border-[#233e6e] bg-[#0c1c40] p-5">
+        <h4 className="text-xl font-semibold text-white mb-3">
+          Visionary Contributions
+        </h4>
+
+        <p className="text-[#b8c8e6] leading-8">
+          Leading innovations in blockchain optimization, ontology research,
+          semantic intelligence and enterprise security solutions for global impact.
+        </p>
+      </div>
+    </div>
+
+
+    {/* RIGHT QUOTE PANEL */}
+    <div className="rounded-xl border border-white/10 bg-[#0a1736]/78 p-6 lg:border-l lg:border-l-white/15">
+
+      <p className="text-6xl leading-none text-[#ff4d43]">“</p>
+
+      <p className="mt-4 text-2xl md:text-3xl lg:text-4xl leading-[1.35] text-white">
+        Our mission is to build technologies that create a smarter,
+        safer, and more transparent world.
+      </p>
+
+      <p className="mt-6 text-2xl italic text-[#d7e5ff]">
+        H. Takahashi
+      </p>
+
+      <div className="mt-8 h-px bg-gradient-to-r from-[#ff5d52] to-transparent" />
+
+      <p className="mt-8 text-xl font-semibold text-[#ff6d64]">
+        Vision for the Future
+      </p>
+
+      <p className="mt-4 text-base leading-8 text-[#b8c8e6]">
+        We envision a world where AI and blockchain empower people
+        and organizations to collaborate securely, innovate fearlessly,
+        and grow sustainably.
+      </p>
+
+      <div className="mt-10 rounded-xl border border-[#213760] bg-[#0d1e46] p-5">
+        <h4 className="text-lg font-semibold text-white">
+          Core Focus Areas
+        </h4>
+
+        <div className="mt-5 space-y-4">
+          {[
+            "Artificial Intelligence",
+            "Blockchain Infrastructure",
+            "Semantic Web",
+            "Cybersecurity Systems",
+          ].map((item) => (
+            <div key={item} className="flex items-center gap-3 text-[#d5e4ff]">
+              <span className="h-2 w-2 rounded-full bg-[#ff5548]" />
+              {item}
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
         <section className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 md:p-6">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d14840]">

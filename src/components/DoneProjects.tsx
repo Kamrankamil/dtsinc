@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { doneProjects } from "@/data/site";
+import { ceoDetailedProfile } from "@/data/ceoDetailedProfile";
 import PlexusBg from "./PlexusBg";
 import {
   ArrowRight,
@@ -132,7 +133,7 @@ export default function DoneProjects() {
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-[#d14840]">
                 Our Projects
               </p>
-              <h2 className="mt-4 max-w-xl text-4xl font-bold leading-tight text-white md:text-6xl">
+              <h2 className="mt-4 max-w-xl text-3xl font-bold leading-tight text-white md:text-4xl lg:text-6xl">
                 Building the Future with Blockchain &amp; AI
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-[#b7c7e4]">
@@ -305,7 +306,7 @@ export default function DoneProjects() {
 
           <section className="mt-10 rounded-2xl border border-white/10 bg-white/[0.02] px-5 py-7 md:px-8">
             <h3 className="text-3xl font-semibold text-white">Why Our Projects Stand Out</h3>
-            <div className="mt-6 grid gap-4 md:grid-cols-5">
+            <div className="mt-6 grid gap-4 grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
               {[
                 {
                   icon: Shield,
@@ -351,7 +352,7 @@ export default function DoneProjects() {
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d14840]">
                 Partner With Us
               </p>
-              <h3 className="mt-4 text-4xl font-semibold text-white md:text-6xl">
+              <h3 className="mt-4 text-2xl font-semibold text-white md:text-4xl lg:text-6xl">
                 Let&apos;s Build the Future Together
               </h3>
               <p className="mt-4 max-w-xl text-[17px] leading-8 text-[#b9c9e7]">
@@ -386,6 +387,81 @@ export default function DoneProjects() {
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,20,49,0.4)_0%,rgba(7,20,49,0.12)_42%,rgba(7,20,49,0.08)_100%)]" />
               </div>
             </div>
+          </section>
+
+          <section className="mt-10 rounded-2xl border border-white/10 bg-[linear-gradient(130deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015))] p-5 md:p-7">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#d14840]">
+              Leadership and Innovation
+            </p>
+            <h3 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+              Profile of CEO: Prof. Hiro Takahashi, Ph.D.
+            </h3>
+            <p className="mt-3 text-[16px] leading-8 text-[#b8c8e5]">
+              {ceoDetailedProfile.heading}
+            </p>
+
+            <div className="mt-5 space-y-3 text-[15px] leading-8 text-[#a9bddf]">
+              {ceoDetailedProfile.overview.slice(0, 2).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <article className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+                <h4 className="text-xl font-semibold text-white">Research Areas</h4>
+                <ul className="mt-3 space-y-2 text-sm leading-7 text-[#a9bddf]">
+                  {ceoDetailedProfile.researchTopics.map((topic) => (
+                    <li key={topic} className="flex gap-2">
+                      <span className="mt-[9px] h-1.5 w-1.5 rounded-full bg-[#ff5f57]" />
+                      <span>{topic}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+
+              <article className="rounded-xl border border-white/10 bg-white/[0.02] p-4">
+                <h4 className="text-xl font-semibold text-white">Key Blockchain Projects</h4>
+                <ul className="mt-3 space-y-2 text-sm leading-7 text-[#a9bddf]">
+                  {ceoDetailedProfile.blockchainProjects.map((project) => (
+                    <li key={project} className="flex gap-2">
+                      <span className="mt-[9px] h-1.5 w-1.5 rounded-full bg-[#ff5f57]" />
+                      <span>{project}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+
+            <details className="mt-5 rounded-xl border border-white/10 bg-white/[0.02] p-4">
+              <summary className="cursor-pointer text-sm font-semibold uppercase tracking-[0.12em] text-[#ff7a72]">
+                View Full CEO Details
+              </summary>
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <article>
+                  <h5 className="text-base font-semibold text-white">Qualifications and Roles</h5>
+                  <ul className="mt-2 space-y-2 text-sm leading-7 text-[#a9bddf]">
+                    {ceoDetailedProfile.qualifications.map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="mt-[9px] h-1.5 w-1.5 rounded-full bg-[#ff5f57]" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+
+                <article>
+                  <h5 className="text-base font-semibold text-white">Memberships</h5>
+                  <ul className="mt-2 space-y-2 text-sm leading-7 text-[#a9bddf]">
+                    {ceoDetailedProfile.memberships.map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="mt-[9px] h-1.5 w-1.5 rounded-full bg-[#ff5f57]" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              </div>
+            </details>
           </section>
 
           <section className="mt-10 grid items-center gap-4 rounded-2xl border border-white/10 bg-[linear-gradient(110deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015))] p-5 md:grid-cols-[1fr_auto] md:p-6">

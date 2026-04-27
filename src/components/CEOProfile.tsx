@@ -19,6 +19,7 @@ import {
   ceoMediaLinks,
   ceoSeminar,
 } from "@/data/site";
+import { ceoDetailedProfile } from "@/data/ceoDetailedProfile";
 import SectionHeading from "./SectionHeading";
 
 const iconMap = [GraduationCap, Globe2, FileText, Users, Award];
@@ -43,7 +44,7 @@ export default function CEOProfile() {
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ff5a52]">
                 Profile of CEO
               </p>
-              <h1 className="mt-3 text-5xl font-semibold leading-[1.06] text-white md:text-7xl">
+              <h1 className="mt-3 text-3xl font-semibold leading-[1.06] text-white md:text-5xl xl:text-7xl">
                 Prof. Hiro <span className="text-[#ff4137]">Takahashi,</span> Ph.D.
               </h1>
               <p className="mt-4 text-xl uppercase tracking-[0.14em] text-[#d9e5ff]">
@@ -75,13 +76,13 @@ export default function CEOProfile() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href="https://www.dts-fintech.com/"
+                  href="/contact"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-md bg-[#d92f28] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#f03f37]"
                 >
                   <Download size={16} />
-                  Download Full Profile
+                  Connect with CEO
                 </a>
                 <a
                   href="/contact"
@@ -107,7 +108,7 @@ export default function CEOProfile() {
       </motion.section>
 
       <div className="section-shell mt-12">
-        <div className="mt-12 grid gap-8 lg:grid-cols-[0.58fr_0.42fr]">
+        <div className="mt-12 grid gap-8 grid-cols-1 lg:grid-cols-[0.58fr_0.42fr]">
           <div>
             <SectionHeading
               eyebrow="Academic and Industry Timeline"
@@ -194,6 +195,58 @@ export default function CEOProfile() {
             </div>
           </div>
         </div>
+
+        <section className="mt-12 space-y-6 rounded-2xl border border-white/10 bg-[linear-gradient(150deg,rgba(255,255,255,0.045),rgba(255,255,255,0.015))] p-6 md:p-8">
+          <SectionHeading
+            eyebrow="Detailed Profile"
+            title={ceoDetailedProfile.heading}
+          />
+
+          <div className="space-y-4 text-[15px] leading-8 text-[#b6c5df] md:text-base">
+            {ceoDetailedProfile.overview.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+
+          <div className="grid gap-5 lg:grid-cols-2">
+            <article className="rounded-xl border border-white/10 bg-[#07152f]/60 p-5">
+              <h3 className="text-xl font-semibold text-white">Research Topics</h3>
+              <ul className="mt-3 space-y-2 text-sm leading-7 text-[#a9bddf]">
+                {ceoDetailedProfile.researchTopics.map((topic) => (
+                  <li key={topic} className="flex gap-2">
+                    <span className="mt-[9px] h-1.5 w-1.5 rounded-full bg-[#ff5a52]" />
+                    <span>{topic}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="rounded-xl border border-white/10 bg-[#07152f]/60 p-5">
+              <h3 className="text-xl font-semibold text-white">Blockchain Projects</h3>
+              <ul className="mt-3 space-y-2 text-sm leading-7 text-[#a9bddf]">
+                {ceoDetailedProfile.blockchainProjects.map((project) => (
+                  <li key={project} className="flex gap-2">
+                    <span className="mt-[9px] h-1.5 w-1.5 rounded-full bg-[#ff5a52]" />
+                    <span>{project}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div>
+
+          <article className="rounded-xl border border-white/10 bg-[#07152f]/60 p-5">
+            <h3 className="text-xl font-semibold text-white">
+              Overseas Business Contribution and Public Sector Engagement
+            </h3>
+            <div className="mt-3 space-y-3 text-sm leading-7 text-[#a9bddf]">
+              {ceoDetailedProfile.overseasContribution.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </article>
+
+     
+        </section>
       </div>
     </section>
   );
