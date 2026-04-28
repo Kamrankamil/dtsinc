@@ -1,10 +1,5 @@
-import PageShell from "@/components/PageShell";
-import Team from "@/components/Team";
+import { notFound } from "next/navigation";
 
 export default function TeamPage() {
-  return (
-    <PageShell>
-      <Team />
-    </PageShell>
-  );
+  notFound();
 }

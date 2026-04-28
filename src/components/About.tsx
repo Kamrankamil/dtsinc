@@ -183,10 +183,10 @@ export default function About({ isHome = false }: AboutProps) {
 
             <div className="relative hidden h-[360px] overflow-hidden rounded-2xl border border-white/10 lg:block">
               <Image
-                src="/assets/Dts project ai.png"
+                src="/assets/blockchiannetwork.png"
                 alt="Digital globe and blockchain visualization"
                 fill
-                priority
+                loading="lazy"
                 className="object-cover object-center"
               />
               <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(5,15,39,0.35),rgba(7,18,47,0.16))]" />

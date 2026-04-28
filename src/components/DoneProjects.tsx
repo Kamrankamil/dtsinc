@@ -169,10 +169,10 @@ export default function DoneProjects() {
 
             <div className="relative hidden h-[360px] overflow-hidden rounded-3xl border border-white/10 lg:block">
               <Image
-                src="/assets/Dts project ai.png"
+                src="/assets/blockchiannetwork.png"
                 alt="DTS AI projects visual"
                 fill
-                priority
+                loading="lazy"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_38%,rgba(52,119,255,0.28),transparent_42%),radial-gradient(circle_at_56%_78%,rgba(255,92,74,0.28),transparent_40%),linear-gradient(120deg,rgba(3,11,30,0.68),rgba(7,21,53,0.52))]" />

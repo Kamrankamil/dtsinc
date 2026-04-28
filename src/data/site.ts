@@ -4,7 +4,6 @@ export const navLinks = [
   { label: "BlockChain", href: "/blockchain" },
   { label: "Projects", href: "/projects" },
   { label: "Publications", href: "/publications" },
-  { label: "Team", href: "/team" },
   { label: "Contact", href: "/contact" },
   { label: "CEO", href: "/ceo" },
   { label: "DTS Links", href: "/links" },

@@ -10,7 +10,11 @@ export default function ThemeProvider({ children }: ThemeProviderProps) {
   useEffect(() => {
     // Force dark theme globally
     document.documentElement.classList.remove("light");
-    localStorage.setItem("dts-theme", "dark");
+    try {
+      localStorage.setItem("dts-theme", "dark");
+    } catch {
+      // Ignore storage failures in restricted browsing modes.
+    }
   }, []);
 
   return <>{children}</>;

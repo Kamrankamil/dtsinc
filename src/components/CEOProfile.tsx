@@ -33,10 +33,17 @@ export default function CEOProfile() {
         viewport={{ once: true }}
         className="relative min-h-[86vh] w-full overflow-hidden border-y border-white/10"
       >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/assets/seminar/ceo%20iamge.png')" }}
-          />
+          <div className="absolute inset-0 overflow-hidden">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  >
+    <source src="/assets/seminar/ceo image.mp4" type="video/mp4" />
+  </video>
+</div>
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,8,24,0.94)_0%,rgba(3,8,24,0.78)_40%,rgba(3,8,24,0.38)_100%)]" />
 
           <div className="relative z-10 mx-auto flex min-h-[86vh] w-full max-w-[1400px] flex-col justify-between p-6 md:p-8 xl:p-10">

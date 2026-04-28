@@ -1,26 +1,26 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CursorGlow from "./CursorGlow";
 import Footer from "./Footer";
+import Hero3D from "./Hero3D";
 import HomeSummary from "./HomeSummary";
 import LoadingScreen from "./LoadingScreen";
 import Navbar from "./Navbar";
 import ParticlesBg from "./ParticlesBg";
 import ThemeProvider from "./ThemeProvider";
 
-const Hero3D = dynamic(() => import("./Hero3D"), { ssr: false });
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePage() {
+  const [hydrated, setHydrated] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setLoading(false), 1700);
+    setHydrated(true);
+    const timer = window.setTimeout(() => setLoading(false), 800);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -72,7 +72,7 @@ export default function HomePage() {
 
   return (
     <ThemeProvider>
-      <LoadingScreen show={loading} />
+      <LoadingScreen show={hydrated && loading} />
       <CursorGlow />
       <div className="relative min-h-screen overflow-hidden">
         <ParticlesBg />
