@@ -5,7 +5,6 @@ import CursorGlow from "./CursorGlow";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import ParticlesBg from "./ParticlesBg";
-import ThemeProvider from "./ThemeProvider";
 
 type PageShellProps = {
   children: React.ReactNode;
@@ -19,7 +18,7 @@ export default function PageShell({
   backgroundMode = "simple",
 }: PageShellProps) {
   return (
-    <ThemeProvider>
+    <>
       <CursorGlow />
       <div className="relative min-h-screen overflow-hidden">
         <ParticlesBg mode={backgroundMode} />
@@ -28,6 +27,6 @@ export default function PageShell({
         {showContact ? <Contact /> : null}
         <Footer />
       </div>
-    </ThemeProvider>
+    </>
   );
 }

@@ -71,6 +71,7 @@ export default function Footer() {
               <Link
                 key={item.label}
                 href={item.href}
+                prefetch={false}
                 className="inline-flex items-center gap-2 transition hover:text-white"
               >
                 <span className="text-white/45">›</span>
@@ -87,6 +88,7 @@ export default function Footer() {
               <Link
                 key={item.label}
                 href={item.href}
+                prefetch={false}
                 className="inline-flex items-center gap-2 transition hover:text-white"
               >
                 <span className="text-white/45">›</span>

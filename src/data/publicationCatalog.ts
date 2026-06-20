@@ -86,24 +86,31 @@ export const journalPapers: PublicationRecord[] = [
 export const internationalReviewedPapers: PublicationRecord[] = [
   {
     serial: 1,
+    authors: "Hironao Takahashi, Mubashir Khan, Uzair Lakhani",
+    title:
+      "Enhance the Mining Popularity with Low Power Consumption on PoA Autonomous Decentralized Voting Blockchain. ISADS 2025",
+    publishedDate: "2025",
+  },
+  {
+    serial: 2,
+    authors: "Hironao Takahashi, Shinji Nakano, Uzair Lakhani",
+    title:
+      "SHA256d Hash Rate Enhancement by L3 Cache. IEEE 7th Conference on Consumer Electronics (GCCE), ISSN: 2378-8143",
+    publishedDate: "13-December-2018",
+  },
+  {
+    serial: 3,
     authors: "H Takahashi, M Waqar, M Kamran",
     title:
       "Late transaction settlement on PoA voting Blockchain for higher security crypto token transfer. IEEE 14th Global Conference on Consumer Electronics (GCCE), pp.425-426",
     publishedDate: "2025",
   },
   {
-    serial: 2,
+    serial: 4,
     authors: "H Takahashi, U Lakhani, A Soomro, MM Khan, Muhammad Kamran",
     title:
       "Representative Node on Voting Blockchain for High Secure Mobile Wallet Users. IEEE 13th Global Conference on Consumer Electronics (GCCE), pp.1099-1101",
     publishedDate: "2024",
-  },
-  {
-    serial: 3,
-    authors: "Hironao Takahashi, Shinji Nakano, Uzair Lakhani",
-    title:
-      "SHA256d Hash Rate Enhancement by L3 Cache. IEEE 7th Conference on Consumer Electronics (GCCE), ISSN: 2378-8143",
-    publishedDate: "13-December-2018",
   },
   {
     serial: 2,

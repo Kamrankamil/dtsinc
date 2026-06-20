@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import OptimizationDashboard from "./blockchain/OptimizationDashboard";
+import dynamic from "next/dynamic";
 import {
   BarChart2,
   Bot,
@@ -24,6 +24,11 @@ import {
  UserRound,
  Cpu
 } from "lucide-react";
+
+const OptimizationDashboard = dynamic(
+  () => import("./blockchain/OptimizationDashboard"),
+  { ssr: false }
+);
 
 const stats = [
  {
@@ -279,7 +284,7 @@ export default function HomeSummary() {
           alt="AI Handshake"
           width={720}
           height={480}
-          priority
+          loading="lazy"
           className="relative z-10 w-full max-w-[680px] object-contain
           drop-shadow-[0_0_45px_rgba(74,130,255,.35)]"
         />
@@ -382,20 +387,22 @@ export default function HomeSummary() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <a
+              <Link
                 href="/contact"
+                prefetch={false}
                 className="inline-flex items-center gap-2 rounded-lg bg-[#cc2e26] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_24px_rgba(204,46,38,0.45)] transition hover:bg-[#e8403a] hover:shadow-[0_0_36px_rgba(232,64,58,0.6)]"
               >
                 Contact Us
                 <ArrowRight size={14} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/projects"
+                prefetch={false}
                 className="inline-flex items-center gap-2 rounded-lg border border-white/25 bg-[#0b1a3d]/55 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/45"
               >
                 Explore Projects
                 <ArrowRight size={14} />
-              </a>
+              </Link>
             </div>
           </div>
         </section>

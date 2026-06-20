@@ -1,31 +1,20 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CursorGlow from "./CursorGlow";
 import Footer from "./Footer";
 import Hero3D from "./Hero3D";
 import HomeSummary from "./HomeSummary";
-import LoadingScreen from "./LoadingScreen";
 import Navbar from "./Navbar";
 import ParticlesBg from "./ParticlesBg";
-import ThemeProvider from "./ThemeProvider";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function HomePage() {
-  const [hydrated, setHydrated] = useState(false);
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    setHydrated(true);
-    const timer = window.setTimeout(() => setLoading(false), 800);
-    return () => window.clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const sections = gsap.utils.toArray<HTMLElement>("section");
+    const sections = gsap.utils.toArray<HTMLElement>("section:not(#home)");
     sections.forEach((section) => {
       gsap.fromTo(
         section,
@@ -71,8 +60,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <ThemeProvider>
-      <LoadingScreen show={hydrated && loading} />
+    <>
       <CursorGlow />
       <div className="relative min-h-screen overflow-hidden">
         <ParticlesBg />
@@ -83,6 +71,6 @@ export default function HomePage() {
         </main>
         <Footer />
       </div>
-    </ThemeProvider>
+    </>
   );
 }

@@ -31,6 +31,7 @@ export default function Navbar() {
             <Link
               key={item.label}
               href={item.href}
+              prefetch={false}
               className={`text-[14px] font-medium transition-colors hover:text-white ${
                 pathname === item.href
                   ? "rounded-sm border border-[#cc2e26] px-1.5 py-0.5 text-[#ff6a60] shadow-[0_0_12px_rgba(204,46,38,0.5)]"
@@ -65,6 +66,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
+                prefetch={false}
                 onClick={() => setOpen(false)}
                 className="rounded-lg bg-white/5 px-3 py-2 text-sm"
               >

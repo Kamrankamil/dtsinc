@@ -8,9 +8,10 @@ import {
   ShieldCheck,
   Wallet,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const floatingBadges = [
   { icon: ShieldCheck, label: "Security", className: "left-[8%] top-[14%]" },
@@ -36,21 +37,34 @@ const particleDots = [
 ];
 
 export default function Hero3D() {
+  const reduceMotion = useReducedMotion();
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1024px)").matches;
+    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData;
+    setShowVideo(desktop && !saveData);
+  }, []);
+
   return (
     <section
       id="home"
       className="relative min-h-screen overflow-hidden bg-[#020917] pt-28"
     >
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-20"
-        >
-          <source src="/assets/video.mp4" type="video/mp4" />
-        </video>
+        {showVideo ? (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            poster="/assets/hero_right.png"
+            className="absolute inset-0 h-full w-full object-cover opacity-20"
+          >
+            <source src="/assets/video.mp4" type="video/mp4" />
+          </video>
+        ) : null}
 
         <div className="absolute inset-0 bg-[#030b1f]/80" />
         <div className="absolute -left-32 top-0 h-[650px] w-[650px] rounded-full bg-red-600/20 blur-[140px]" />
@@ -65,22 +79,22 @@ export default function Hero3D() {
           }}
         />
 
-        {particleDots.map((dot, index) => (
-          <motion.span
-            key={index}
-            className="absolute h-1.5 w-1.5 rounded-full bg-blue-400/70"
-            style={{ left: dot.left, top: dot.top }}
-            animate={{ opacity: [0.2, 1, 0.2], scale: [0.85, 1.4, 0.85] }}
-            transition={{ duration: 2.2, delay: dot.delay, repeat: Infinity, ease: "easeInOut" }}
-          />
-        ))}
+        {!reduceMotion
+          ? particleDots.map((dot, index) => (
+              <motion.span
+                key={index}
+                className="absolute h-1.5 w-1.5 rounded-full bg-blue-400/70"
+                style={{ left: dot.left, top: dot.top }}
+                animate={{ opacity: [0.2, 1, 0.2], scale: [0.85, 1.4, 0.85] }}
+                transition={{ duration: 2.2, delay: dot.delay, repeat: Infinity, ease: "easeInOut" }}
+              />
+            ))
+          : null}
       </div>
 
       <div className="relative z-10 mx-auto grid min-h-[88vh] max-w-[1450px] items-center gap-10 px-5 lg:grid-cols-2 lg:px-14">
         <motion.div
-          initial={{ opacity: 0, y: 26 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={false}
           className="max-w-[620px] text-center lg:text-left mx-auto lg:mx-0"
         >
          <p className="mb-5 text-xs tracking-[.35em] uppercase font-bold text-[#e05a52]">
@@ -120,8 +134,8 @@ for global enterprise innovation.
           <div className="absolute h-[560px] w-[560px] rounded-full bg-red-500/20 blur-[140px]" />
 
           <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 44, repeat: Infinity, ease: "linear" }}
+            animate={reduceMotion ? undefined : { rotate: 360 }}
+            transition={reduceMotion ? undefined : { duration: 44, repeat: Infinity, ease: "linear" }}
             className="absolute h-[640px] w-[640px] rounded-full border border-blue-500/18"
           >
             <div className="absolute inset-10 rounded-full border border-red-500/20" />
@@ -129,8 +143,8 @@ for global enterprise innovation.
           </motion.div>
 
           <motion.div
-            animate={{ y: [0, -16, 0] }}
-            transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+            animate={reduceMotion ? undefined : { y: [0, -16, 0] }}
+            transition={reduceMotion ? undefined : { duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
             className="relative z-30"
           >
             <div className="absolute -bottom-14 left-1/2 h-24 w-80 -translate-x-1/2 rounded-full bg-blue-500/20 blur-3xl" />
@@ -147,8 +161,8 @@ for global enterprise innovation.
           <div className="absolute bottom-[78px] z-10">
             <div className="relative h-[180px] w-[520px]">
               <motion.div
-                animate={{ opacity: [0.3, 0.9, 0.3], scale: [0.96, 1.02, 0.96] }}
-                transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
+                animate={reduceMotion ? undefined : { opacity: [0.3, 0.9, 0.3], scale: [0.96, 1.02, 0.96] }}
+                transition={reduceMotion ? undefined : { duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute inset-0 rounded-full border border-blue-500/30"
               />
               <div className="absolute inset-6 rounded-full border border-red-500/30" />
@@ -163,8 +177,8 @@ for global enterprise innovation.
               <motion.div
                 key={badge.label}
                 initial={{ opacity: 0, scale: 0.8, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
-                transition={{ duration: 0.7, delay: 0.25 + index * 0.08, y: { duration: 3 + index * 0.3, repeat: Infinity, ease: "easeInOut" } }}
+                animate={reduceMotion ? { opacity: 1, scale: 1, y: 0 } : { opacity: 1, scale: 1, y: [0, -6, 0] }}
+                transition={reduceMotion ? { duration: 0.35, delay: 0.1 + index * 0.04 } : { duration: 0.7, delay: 0.25 + index * 0.08, y: { duration: 3 + index * 0.3, repeat: Infinity, ease: "easeInOut" } }}
                 className={`absolute z-40 hidden rounded-xl border border-[#ff5f57]/35 bg-[#071226]/85 px-3 py-2 text-[11px] uppercase tracking-wide text-[#ff7a72] shadow-[0_0_20px_rgba(209,72,64,.22)] backdrop-blur-md md:flex md:items-center md:gap-2 ${badge.className}`}
               >
                 <Icon size={14} className="text-[#ff5f57]" />
